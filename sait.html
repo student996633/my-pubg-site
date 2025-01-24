@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тактики PUBG</title>
+    <link rel="stylesheet" href="Sait.css">  <!-- Подключаем файл стилей -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Тактики для PUBG</h1>
+            <p>Покори поле боя с лучшими стратегиями</p>
+        </div>
+    </header>
+
+    <section class="intro">
+        <h2>Что такое PUBG?</h2>
+        <p>PlayerUnknown's Battlegrounds (PUBG) — это многопользовательская онлайн-игра в жанре королевской битвы, в которой 100 игроков сражаются на огромной карте, чтобы остаться последним выжившим.</p>
+    </section>
+
+    <section class="tactics">
+        <h2>Основные тактики для победы</h2>
+
+        <!-- Вкладки -->
+        <div class="tabs">
+            <button class="tab-button" onclick="openTab(event, 'tactic1')">Стратегия "Пешка"</button>
+            <button class="tab-button" onclick="openTab(event, 'tactic2')">"Убийца в кустах"</button>
+            <button class="tab-button" onclick="openTab(event, 'tactic3')">Контроль зоны</button>
+            <button class="tab-button" onclick="openTab(event, 'tactic4')">Групповая игра</button>
+        </div>
+
+        <!-- Содержимое вкладок -->
+        <div id="tactic1" class="tab-content">
+            <h3>Стратегия "Пешка"</h3>
+            <p>Будьте осторожными и не рискуйте без нужды. Прячьтесь за укрытиями и двигайтесь по карте осторожно, выбирая безопасные пути и места для засад.</p>
+        </div>
+
+        <div id="tactic2" class="tab-content">
+            <h3>"Убийца в кустах"</h3>
+            <p>Используйте растительность для того, чтобы скрыться от врагов и неожиданно атаковать их. Эту стратегию можно использовать в поздних стадиях игры, когда осталось мало игроков.</p>
+        </div>
+
+        <div id="tactic3" class="tab-content">
+            <h3>Контроль зоны</h3>
+            <p>Зона сужается, и важно знать, когда стоит атаковать, а когда отступить в безопасное место. Постоянно следите за картой и позициями врагов.</p>
+        </div>
+
+        <div id="tactic4" class="tab-content">
+            <h3>Групповая игра</h3>
+            <p>Когда играете с командой, важно иметь четкую стратегию и коммуникацию. Работайте вместе, чтобы занять лучшие позиции и разделить задачи для эффективных атак.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>Автор: Rizzi</p>
+            <p>© 2025. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Функция для переключения вкладок
+        function openTab(evt, tabName) {
+            // Скрыть все вкладки
+            var i, tabcontent, tabbuttons;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Убрать активный стиль у всех кнопок
+            tabbuttons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].classList.remove("active");
+            }
+
+            // Показать выбранную вкладку и добавить активный стиль к кнопке
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>

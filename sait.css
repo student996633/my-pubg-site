@@ -1,0 +1,99 @@
+/* Стили для всего сайта */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #212121;
+    color: #fff;
+    line-height: 1.6;
+    background-image: url('https://example.com/your-background-image.jpg'); /* Замените на путь к своему фоновому изображению */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: rgba(0, 115, 230, 0.7);
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+
+header .logo h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+header .logo p {
+    font-size: 1.2em;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+/* Вкладки */
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.tab-button:hover {
+    background-color: #0073e6;
+}
+
+.tab-button.active {
+    background-color: #0073e6;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 30px 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+header, .tactics, footer {
+    animation: fadeIn 1s ease-in-out;
+}
